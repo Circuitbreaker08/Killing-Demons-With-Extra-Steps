@@ -1,6 +1,4 @@
-# sturdy-octo-invention
 This is a game maybe
-Fascist Octopus Archdemon rules over Poland with The Invention; Anime and guns
 
 The Invention --> Really big railgun
 NG+ from defeat of the Octopus Archdemon cuz timeloop
