@@ -1,5 +1,6 @@
 {
   "type": "gun",
+  "name": "Revolver",
   "ammo": ".45",
   "rounds": 6,
   "fire_cooldown": 60,
