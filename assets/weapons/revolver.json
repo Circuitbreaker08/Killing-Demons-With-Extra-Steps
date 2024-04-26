@@ -1,0 +1,10 @@
+{
+  "type": "gun",
+  "ammo": ".45",
+  "rounds": 6,
+  "fire_cooldown": 60,
+  "range": 5,
+  "damage": 3,
+  "innacuracy": 1,
+  "recoil": 30
+}
