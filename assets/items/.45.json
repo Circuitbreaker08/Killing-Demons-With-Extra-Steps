@@ -1,4 +1,5 @@
 {
+  "type": "ammo",
   "name": ".45 Round",
   "damage_multiplier": 1,
   "damage_type": "kinetic",

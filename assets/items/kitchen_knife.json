@@ -1,8 +1,7 @@
 {
-  "type": "melee",
+  "type": "melee_stab",
   "name": "Kitchen Knife",
   "damage": 10,
   "damage_type": "slashing",
-  "range": 3,
-  "arc": 45
+  "range": 3
 }

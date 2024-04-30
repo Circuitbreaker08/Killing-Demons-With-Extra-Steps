@@ -2,7 +2,7 @@
   "type": "gun",
   "name": "Revolver",
   "ammo": ".45",
-  "rounds": 6,
+  "mag_size": 6,
   "fire_cooldown": 60,
   "range": 5,
   "damage": 3,

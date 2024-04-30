@@ -14,7 +14,8 @@ running = True
 while running:
     events = pygame.events.get()
     for event in events:
-        if event.type == pygame.quit:
+        if event.type == pygame.QUIT:
+            pygame.quit()
             running = False
     pygame.display.flip()
     clock.tick(60)

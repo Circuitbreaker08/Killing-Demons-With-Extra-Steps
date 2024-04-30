@@ -1,5 +1,7 @@
 import sys
 
+from assets import sprites
+
 RESOLUTION = getattr(sys.modules["__main__"], "RESOLUTION")
 screen = getattr(sys.modules["__main__"], "screen")
 
