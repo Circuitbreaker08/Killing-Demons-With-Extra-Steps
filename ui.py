@@ -4,6 +4,7 @@ import sys
 from assets import sprites
 
 RESOLUTION = getattr(sys.modules["__main__"], "RESOLUTION")
+scale = (RESOLUTION[0]/1920, RESOLUTION[1]/1080)
 screen: pygame.Surface = getattr(sys.modules["__main__"], "screen")
 mouse = (0, 0)
 mouse_down = True
@@ -17,7 +18,7 @@ class Image():
         screen.blit(self.image, self.position)
 
 class Button():
-    def __init__(self, position: tuple[int, int], size: tuple[int, int], image, event: function):
+    def __init__(self, position: tuple[int, int], size: tuple[int, int], image, event: callable):
         self.position = position
         self.size = size
         self.image = image
@@ -25,7 +26,7 @@ class Button():
 
     def tick(self):
         screen.blit(self.image, self.position)
-        if mouse[0] > self.position[0] and mouse[0] < self.size[1] and mouse[1] > self.position[0] and mouse[1] < self.position[1] and mouse_down:
+        if mouse[0] > self.position[0] and mouse[0] < self.size[0] + self.position[0] and mouse[1] > self.position[1] and mouse[1] < self.size[1] + self.position[1] and mouse_down:
             self.event()
 
 elements: list[Image, Button] = []
@@ -42,5 +43,5 @@ def title_screen():
     global elements
     elements = [
         Image((39 * RESOLUTION[0]/320, RESOLUTION[1]/10), sprites["ui"]["logo.png"]),
-        Button((0, 0), (100, 100), sprites["ui"]["start_game.png"], debug)
+        Button((401 * RESOLUTION[0]/960, RESOLUTION[1]/2), (316 * scale[0], 51 * scale[1]), sprites["ui"]["start_game.png"], debug)
     ]
