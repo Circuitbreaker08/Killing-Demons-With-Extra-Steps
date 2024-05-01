@@ -10,12 +10,18 @@ clock = pygame.time.Clock()
 from assets import sprites
 import ui
 
+ui.title_screen()
+
 running = True
 while running:
-    events = pygame.events.get()
+    mouse_down = False
+    events = pygame.event.get()
     for event in events:
         if event.type == pygame.QUIT:
             pygame.quit()
             running = False
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            mouse_down = True
+    ui.tick()
     pygame.display.flip()
     clock.tick(60)
