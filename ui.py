@@ -32,6 +32,7 @@ class Button():
 elements: list[Image, Button] = []
 
 def tick():
+    global mouse, mouse_down
     mouse = pygame.mouse.get_pos()
     mouse_down = getattr(sys.modules["__main__"], "mouse_down")
     for element in elements:
@@ -43,5 +44,5 @@ def title_screen():
     global elements
     elements = [
         Image((39 * RESOLUTION[0]/320, RESOLUTION[1]/10), sprites["ui"]["logo.png"]),
-        Button((401 * RESOLUTION[0]/960, RESOLUTION[1]/2), (316 * scale[0], 51 * scale[1]), sprites["ui"]["start_game.png"], debug)
+        Button((401 * RESOLUTION[0]/960, 3 * RESOLUTION[1]/4), (316 * scale[0], 51 * scale[1]), sprites["ui"]["start_game.png"], debug)
     ]
