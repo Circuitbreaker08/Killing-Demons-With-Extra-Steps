@@ -39,10 +39,15 @@ def tick():
         element.tick()
 
 def title_screen():
-    def debug():
-        print("Click!")
     global elements
     elements = [
         Image((39 * RESOLUTION[0]/320, RESOLUTION[1]/10), sprites["ui"]["logo.png"]),
-        Button((401 * RESOLUTION[0]/960, 3 * RESOLUTION[1]/4), (316 * scale[0], 51 * scale[1]), sprites["ui"]["start_game.png"], debug)
+        Button((401 * RESOLUTION[0]/960, 3 * RESOLUTION[1]/4), (316 * scale[0], 51 * scale[1]), sprites["ui"]["start_game.png"], game_select)
+    ]
+
+def game_select():
+    global elements
+    print('1')
+    elements = [
+
     ]

@@ -22,6 +22,7 @@ while running:
             running = False
         elif event.type == pygame.MOUSEBUTTONDOWN:
             mouse_down = True
+    screen.fill((0, 0, 0))
     ui.tick()
     pygame.display.flip()
     clock.tick(60)
